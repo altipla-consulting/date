@@ -7,9 +7,6 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
 
-    env:
-      GOOGLE_PROJECT: precise-truck-89123
-
     permissions:
       id-token: write
       contents: read
@@ -27,17 +24,6 @@ jobs:
       with:
         node-version: '16.x'
 
-    - name: Authenticate to Google Cloud
-      id: auth
-      uses: google-github-actions/auth@v1
-      with:
-        workload_identity_provider: projects/1060593636030/locations/global/workloadIdentityPools/github/providers/github
-        service_account: gha-npm-packages@${{ env.GOOGLE_PROJECT }}.iam.gserviceaccount.com
-    - name: Setup gcloud SDK
-      uses: google-github-actions/setup-gcloud@v1
-      with:
-        project_id: ${{ env.GOOGLE_PROJECT }}
-
     - name: Cache node modules
       id: cache-npm
       uses: actions/cache@v3
@@ -49,6 +35,7 @@ jobs:
         restore-keys: |
           build-${{ env.cache-name }}-
           build-
+
     - name: Install deps
       run: npm ci
 
