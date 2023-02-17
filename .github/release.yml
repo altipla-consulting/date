@@ -44,8 +44,5 @@ jobs:
     - name: Set version in code
       run: npm version ${{ steps.version.outputs.VERSION }}
 
-    - name: Login to registry
-      run: npm run ar:login
-
     - name: Publish to NPM
       run: npm publish
