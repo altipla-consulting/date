@@ -1,0 +1,31 @@
+{
+  "name": "@altipla/dates",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Date serialization helpers.",
+  "scripts": {
+    "lib": "tsc --declaration --esModuleInterop --outDir dist",
+    "lint": "tsc --noEmit && eslint --ext .ts src",
+    "fix": "eslint --fix --ext .ts src",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/altipla-consulting/dates.git"
+  },
+  "author": "Altipla Consulting",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/altipla-consulting/dates/issues"
+  },
+  "homepage": "https://github.com/altipla-consulting/dates#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@altipla/eslint-config-ts": "^0.6.0"
+  }
+}
