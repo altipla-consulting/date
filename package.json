@@ -27,5 +27,8 @@
   ],
   "devDependencies": {
     "@altipla/eslint-config-ts": "^0.6.0"
+  },
+  "dependencies": {
+    "@buf/googleapis_googleapis.bufbuild_es": "^1.0.0-20221214150216-75b4300737fb.1"
   }
 }
