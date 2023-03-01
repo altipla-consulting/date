@@ -42,7 +42,7 @@ jobs:
       run: npm run lib
 
     - name: Set version in code
-      run: npm version ${{ steps.version.outputs.VERSION }}
+      run: npm version ${{ steps.version.outputs.VERSION }} git-tag-version=false
 
     - name: Publish to NPM
       run: npm publish
