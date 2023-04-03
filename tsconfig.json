@@ -1,9 +1,9 @@
-
 {
   "compilerOptions": {
     "outDir": "dist",
-    "target": "es2020",
-    "module": "es2020",
+    "target": "esnext",
+    "module": "esnext",
+    "verbatimModuleSyntax": true,
     "strict": true,
     "moduleResolution": "node",
     "isolatedModules": true,
