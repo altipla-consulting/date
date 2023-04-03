@@ -6,7 +6,6 @@
     "verbatimModuleSyntax": true,
     "strict": true,
     "moduleResolution": "node",
-    "isolatedModules": true,
     "skipLibCheck": true,
     "baseUrl": "src",
     "esModuleInterop": true,
